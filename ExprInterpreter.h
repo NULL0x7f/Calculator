@@ -66,6 +66,8 @@ public:
 
     double interpret() {
         AST* node = parser.expr();
+        if (parser.getCurToken()->getType() != EoF)
+            throw Exception("Invalid syntax");
         return visit(node);
     }
 };
