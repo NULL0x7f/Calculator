@@ -46,7 +46,7 @@ public:
                 case DIV:
                     if (fabs(num2) < EPS)
                         throw Exception("dived by 0");
-                    operands.push(num1 + num2);
+                    operands.push(num1 / num2);
                     break;
                 case POW:
                     operands.push(pow(num1, num2));
